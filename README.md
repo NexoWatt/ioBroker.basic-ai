@@ -68,4 +68,9 @@ Before publishing, replace these placeholders with your real repository data:
 
 MIT License
 
-Copyright (c) 2026 Dominique
+Copyright (c) 2026 nexoWatt
+
+
+## nexoWatt Trigger
+
+Der wiederverwendbare Trigger für neue Chats liegt in `NEXOWATT_IOBROKER_ADAPTER_STANDARD_TRIGGER.md`.
