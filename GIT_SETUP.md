@@ -1,19 +1,25 @@
 # Git setup
 
-After unpacking the ZIP, you can initialize and push the repository like this:
+## Initialize the repository
 
 ```bash
 git init
-git add .
-git commit -m "Initial commit: ioBroker basic-ai adapter"
 git branch -M main
+git add .
+git commit -m "Initial commit"
+```
+
+## Add a remote
+
+```bash
 git remote add origin https://github.com/<your-user>/ioBroker.basic-ai.git
 git push -u origin main
 ```
 
-Before publishing, replace placeholder values in these files:
+## Before publishing
+
+Update these files with your real repository metadata:
 
 - `package.json`
 - `io-package.json`
 - `README.md`
-- `tools/create-adapter.replay.json`

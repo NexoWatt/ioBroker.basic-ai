@@ -1,78 +1,71 @@
-![Logo](admin/basic-ai.png)
 # ioBroker.basic-ai
 
-## Overview
+![Logo](admin/basic-ai.png)
 
-**basic-ai** is a small ioBroker test adapter scaffold for Basic AI.
-It is intended as a clean starting point for experiments, adapter development,
-and quick validation inside a local ioBroker environment.
+**Basic AI** is a small JavaScript test adapter for ioBroker. It ships with your logo, a JSON admin config, a few demo states, and a release flow that follows the current ioBroker adapter conventions.
 
-## Current test functions
+## What is included
 
-The adapter creates a few demo objects when it starts:
-
-- `basic-ai.0.status.ready`
-- `basic-ai.0.status.lastStart`
-- `basic-ai.0.status.heartbeatCount`
-- `basic-ai.0.status.message`
-- `basic-ai.0.test.trigger`
-- `basic-ai.0.test.lastResult`
-- `basic-ai.0.test.lastExecution`
-- `basic-ai.0.info.connection`
-
-If you write `true` to `basic-ai.0.test.trigger`, the adapter runs a simple test action,
-increments the counter and writes a new result message.
-
-## Adapter configuration
-
-The Admin UI contains three simple test settings:
-
-- **Enable heartbeat**
-- **Heartbeat interval (seconds)**
-- **Default test message**
+- JavaScript adapter scaffold
+- JSON config in `admin/jsonConfig.json`
+- test states:
+  - `basic-ai.0.status.ready`
+  - `basic-ai.0.status.message`
+  - `basic-ai.0.test.trigger`
+- `release-script` integration
+- GitHub Actions workflow template for tests and releases
+- basic test setup with `@iobroker/testing`
 
 ## Development
 
-Install dependencies:
-
 ```bash
 npm install
-```
-
-Run validation:
-
-```bash
-npm run lint
 npm run check
+npm run lint
 npm test
 ```
 
-## Scaffold command
+## Release flow
 
-The base project can be scaffolded with the official ioBroker creator and the replay file
-included in `tools/create-adapter.replay.json`:
+Use the release script instead of publishing manually:
 
 ```bash
-npx @iobroker/create-adapter@latest --replay ./tools/create-adapter.replay.json --nonInteractive --skipAdapterExistenceCheck
+npm run release
 ```
 
-## Notes
+Examples:
 
-- The repository, GitHub handle and email are placeholders and should be replaced before publishing.
-- The logo from this project is already included as `admin/basic-ai.png`.
-- This repository is intentionally kept simple as a test adapter baseline.
+```bash
+npm run release patch
+npm run release minor
+npm run release major
+```
+
+## Repository placeholders
+
+Before publishing, replace these placeholders with your real repository data:
+
+- `https://github.com/yourname/ioBroker.basic-ai`
+- `https://raw.githubusercontent.com/yourname/ioBroker.basic-ai/...`
 
 ## Changelog
 
-### 0.0.1
-- initial test adapter scaffold
+<!--
+  Placeholder for the next version (at the beginning of the line):
+  ### **WORK IN PROGRESS**
+-->
+
+### **WORK IN PROGRESS**
+
+- added release-script support and current ioBroker workflow files
+- added a runnable Basic AI test adapter scaffold with logo and test states
+
+### 0.0.1 (2026-03-19)
+
+- initial repository scaffold
 
 ## License
 
 MIT License
 
-
-## Git repository
-
-This folder is ready to be zipped and uploaded as a Git repository baseline.
-See `GIT_SETUP.md` for the initial Git commands after unpacking.
+Copyright (c) 2026 Dominique

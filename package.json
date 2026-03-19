@@ -1,34 +1,62 @@
 {
   "name": "iobroker.basic-ai",
   "version": "0.0.1",
-  "description": "Test adapter for Basic AI in ioBroker",
-  "author": "Dominique <you@example.com>",
+  "description": "Basic AI test adapter for ioBroker",
+  "author": "Dominique",
+  "contributors": [],
+  "homepage": "https://github.com/yourname/ioBroker.basic-ai",
   "license": "MIT",
-  "main": "main.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-github-name/ioBroker.basic-ai.git"
-  },
-  "homepage": "https://github.com/your-github-name/ioBroker.basic-ai",
-  "bugs": {
-    "url": "https://github.com/your-github-name/ioBroker.basic-ai/issues"
-  },
   "keywords": [
     "ioBroker",
-    "basic-ai",
-    "ai",
-    "test"
+    "adapter",
+    "AI",
+    "test",
+    "automation"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourname/ioBroker.basic-ai.git"
+  },
   "engines": {
     "node": ">=20"
   },
-  "scripts": {
-    "check": "node --check main.js && node --check lib/test-logic.js",
-    "build": "npm run check",
-    "lint": "echo 'Lint is not configured yet'",
-    "test": "echo 'No automated tests configured yet'"
-  },
   "dependencies": {
-    "@iobroker/adapter-core": "^3.2.3"
-  }
+    "@iobroker/adapter-core": "^3.3.2"
+  },
+  "devDependencies": {
+    "@alcalzone/release-script": "^5.0.0",
+    "@alcalzone/release-script-plugin-iobroker": "^4.0.0",
+    "@alcalzone/release-script-plugin-license": "^4.0.0",
+    "@alcalzone/release-script-plugin-manual-review": "^4.0.0",
+    "@iobroker/adapter-dev": "^1.5.0",
+    "@iobroker/eslint-config": "^2.2.0",
+    "@iobroker/testing": "^5.2.2",
+    "@tsconfig/node20": "^20.1.6",
+    "@types/iobroker": "npm:@iobroker/types@^7.0.7",
+    "@types/node": "^20.19.24",
+    "typescript": "~5.9.3"
+  },
+  "main": "main.js",
+  "files": [
+    "admin{,/!(src)/**}/!(tsconfig|tsconfig.*|.eslintrc).{json,json5}",
+    "admin{,/!(src)/**}/*.{html,css,png,svg,jpg,js}",
+    "lib/",
+    "www/",
+    "io-package.json",
+    "LICENSE",
+    "main.js"
+  ],
+  "scripts": {
+    "test:js": "mocha --config test/mocharc.custom.json \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
+    "test:package": "mocha test/package --exit",
+    "test:integration": "mocha test/integration --exit",
+    "test": "npm run test:js && npm run test:package",
+    "check": "tsc --noEmit -p tsconfig.check.json",
+    "lint": "eslint -c eslint.config.mjs .",
+    "release": "release-script"
+  },
+  "bugs": {
+    "url": "https://github.com/yourname/ioBroker.basic-ai/issues"
+  },
+  "readmeFilename": "README.md"
 }

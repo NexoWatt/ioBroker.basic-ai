@@ -2,28 +2,30 @@
   "i18n": true,
   "type": "panel",
   "items": {
-    "enableHeartbeat": {
+    "enableDebugLog": {
       "type": "checkbox",
-      "label": "Enable heartbeat",
-      "newLine": true
-    },
-    "heartbeatInterval": {
-      "type": "number",
-      "label": "Heartbeat interval (seconds)",
-      "min": 1,
-      "max": 3600,
-      "sm": 6,
-      "md": 4,
-      "lg": 3,
-      "newLine": true
-    },
-    "defaultMessage": {
-      "type": "text",
-      "label": "Default test message",
+      "label": "Enable debug log",
+      "help": "Writes additional information to the ioBroker log.",
       "sm": 12,
-      "md": 8,
-      "lg": 6,
-      "newLine": true
+      "md": 12,
+      "default": false
+    },
+    "promptPrefix": {
+      "type": "text",
+      "label": "Prompt prefix",
+      "help": "Prefix used for generated test messages.",
+      "sm": 12,
+      "md": 6,
+      "default": "Basic AI"
+    },
+    "defaultPrompt": {
+      "type": "textarea",
+      "label": "Default prompt",
+      "help": "Message used when test.trigger is pressed.",
+      "sm": 12,
+      "md": 12,
+      "minRows": 4,
+      "default": "Hello from Basic AI"
     }
   }
 }

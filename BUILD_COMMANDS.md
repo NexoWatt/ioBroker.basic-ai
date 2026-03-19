@@ -1,23 +1,30 @@
-# Basic AI – Scaffold & validation
+# Build and release commands for ioBroker.basic-ai
 
-## Adapter scaffold
+## Create / recreate the scaffold
 
 ```bash
 npx @iobroker/create-adapter@latest --replay ./tools/create-adapter.replay.json --nonInteractive --skipAdapterExistenceCheck
 ```
 
-## Local setup
+## Local development
 
 ```bash
-cd ioBroker.basic-ai
 npm install
-npm run build
+npm run check
 npm run lint
 npm test
 ```
 
-## Notes
+## Release handling
 
-- `npm run build` maps to `npm run check` in this JavaScript-based test adapter.
-- Replace the placeholder GitHub handle and email before publishing.
-- The ready-to-use logo is already stored as `admin/basic-ai.png`.
+```bash
+npm run release
+npm run release patch
+npm run release minor
+npm run release major
+```
+
+## GitHub Actions deployment
+
+The included `.github/workflows/test-and-release.yml` follows the current `ioBroker.example` style.
+The deploy job is intentionally commented until npm trusted publishing is configured for the repository.
