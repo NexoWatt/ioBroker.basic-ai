@@ -1,0 +1,114 @@
+{
+  "common": {
+    "name": "basic-ai",
+    "version": "0.0.1",
+    "news": {
+      "0.0.1": {
+        "en": "initial release",
+        "de": "Erstveröffentlichung",
+        "ru": "Начальная версия",
+        "pt": "lançamento inicial",
+        "nl": "Eerste uitgave",
+        "fr": "Première version",
+        "it": "Versione iniziale",
+        "es": "Versión inicial",
+        "pl": "Pierwsze wydanie",
+        "uk": "Початкова версія",
+        "zh-cn": "首次出版"
+      }
+    },
+    "titleLang": {
+      "en": "Basic AI",
+      "de": "Basic AI",
+      "ru": "Basic AI",
+      "pt": "Basic AI",
+      "nl": "Basic AI",
+      "fr": "Basic AI",
+      "it": "Basic AI",
+      "es": "Basic AI",
+      "pl": "Basic AI",
+      "uk": "Basic AI",
+      "zh-cn": "Basic AI"
+    },
+    "desc": {
+      "en": "Test adapter for Basic AI in ioBroker",
+      "de": "Testadapter für Basic AI in ioBroker",
+      "ru": "Test adapter for Basic AI in ioBroker",
+      "pt": "Test adapter for Basic AI in ioBroker",
+      "nl": "Test adapter for Basic AI in ioBroker",
+      "fr": "Test adapter for Basic AI in ioBroker",
+      "it": "Test adapter for Basic AI in ioBroker",
+      "es": "Test adapter for Basic AI in ioBroker",
+      "pl": "Test adapter for Basic AI in ioBroker",
+      "uk": "Test adapter for Basic AI in ioBroker",
+      "zh-cn": "Test adapter for Basic AI in ioBroker"
+    },
+    "authors": [
+      "Dominique <you@example.com>"
+    ],
+    "keywords": [
+      "basic-ai",
+      "ai",
+      "test",
+      "iobroker"
+    ],
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "basic-ai.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/your-github-name/ioBroker.basic-ai/main/admin/basic-ai.png",
+    "readme": "https://github.com/dominique/ioBroker.basic-ai/blob/main/README.md",
+    "loglevel": "info",
+    "tier": 3,
+    "mode": "daemon",
+    "type": "general",
+    "compact": true,
+    "connectionType": "cloud",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "json"
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=6.0.11"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=7.0.23"
+      }
+    ]
+  },
+  "native": {
+    "enableHeartbeat": true,
+    "heartbeatInterval": 30,
+    "defaultMessage": "Basic AI is ready"
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Device or service connected",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
+}

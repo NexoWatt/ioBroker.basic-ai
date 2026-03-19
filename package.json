@@ -1,0 +1,34 @@
+{
+  "name": "iobroker.basic-ai",
+  "version": "0.0.1",
+  "description": "Test adapter for Basic AI in ioBroker",
+  "author": "Dominique <you@example.com>",
+  "license": "MIT",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-github-name/ioBroker.basic-ai.git"
+  },
+  "homepage": "https://github.com/your-github-name/ioBroker.basic-ai",
+  "bugs": {
+    "url": "https://github.com/your-github-name/ioBroker.basic-ai/issues"
+  },
+  "keywords": [
+    "ioBroker",
+    "basic-ai",
+    "ai",
+    "test"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "node --check main.js && node --check lib/test-logic.js",
+    "build": "npm run check",
+    "lint": "echo 'Lint is not configured yet'",
+    "test": "echo 'No automated tests configured yet'"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.2.3"
+  }
+}

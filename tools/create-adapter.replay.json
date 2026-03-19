@@ -1,0 +1,41 @@
+{
+  "cli": true,
+  "target": "directory",
+  "adapterName": "basic-ai",
+  "title": "Basic AI",
+  "description": "Test adapter for Basic AI in ioBroker",
+  "keywords": [
+    "basic-ai",
+    "ai",
+    "test",
+    "iobroker"
+  ],
+  "expert": "no",
+  "features": [
+    "adapter"
+  ],
+  "type": "general",
+  "connectionType": "cloud",
+  "dataSource": "poll",
+  "connectionIndicator": "yes",
+  "language": "JavaScript",
+  "nodeVersion": "20",
+  "adminUi": "json",
+  "tools": [
+    "ESLint",
+    "type checking"
+  ],
+  "eslintConfig": "official",
+  "releaseScript": "no",
+  "devServer": "no",
+  "indentation": "Tab",
+  "quotes": "single",
+  "authorName": "Dominique",
+  "authorGithub": "your-github-name",
+  "authorEmail": "you@example.com",
+  "gitRemoteProtocol": "HTTPS",
+  "gitCommit": "no",
+  "defaultBranch": "main",
+  "license": "MIT License",
+  "dependabot": "no"
+}
